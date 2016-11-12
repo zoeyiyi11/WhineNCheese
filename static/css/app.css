@@ -1,0 +1,85 @@
+/* General */
+.wrap {
+	margin: auto;
+	max-width: 80%;
+	padding-top: 5%;
+}
+
+/* navigation */
+.top-bar {
+	font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    background-color: #704646;
+}
+.top-bar, .top-bar ul  {
+	background-color: #704646;
+	font-color: white;
+}
+
+#buttonDiv{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+/* main section */
+.main {
+	font-family: 'Amatic SC', cursive;
+    font-size: 42px;
+
+	background-image: url("../background.png");
+	height: 85%;
+	background-position-x: center;
+	background-position-y: top;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-color: #875151;
+	
+
+}
+
+textarea{
+	max-width: 100%;
+	font-size: 25px;
+	padding: 0px;
+	padding-left: 20px;
+	resize: none;
+}
+
+h1{
+		text-align: center;
+		font-family: 'Amatic SC', cursive;
+	    font-size: 64px;
+	    font-color: white;
+}
+
+label {
+	padding-top: 3em;
+	margin: auto;
+	width: 35%;
+	min-width: 10em;
+	font-size: 30px;
+}
+.main .button {
+	margin:auto;
+}
+
+.button.hollow.alert {
+    border: 1px solid #9B3333B3;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: #9B3333CC;
+}
+
+.button.hollow.alert:hover, .button.hollow.alert:focus {
+    border-color: #881f0e;
+    color: #881f0e;
+}
+
+
+/* footer */
+.footer  {
+	background-color: #704646;
+	height: 9.5%;
+}

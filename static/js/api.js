@@ -1,13 +1,14 @@
 $(document).ready(function(){
-	//$("#submit").click(function(){
-		//var query = $("#query").val();
+	$(".submit").click(function(){
+		var query = $("#query").val();
+		console.log(query);
 		$.ajax({
 		    url: '/process',
 		    dataType: 'json',
 		    type: 'POST',
 		    contentType: 'application/json; charset=utf-8',
 		    data: JSON.stringify({
-		    	'query': "i love mlot"
+		    	'query': query
 		    }),
 		    success: function(data){
 		        //$('#response').html(data["response"]);
@@ -18,5 +19,5 @@ $(document).ready(function(){
 		        console.log(data);
 		    }
 		});
-	//});
+	});
 });
