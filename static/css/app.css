@@ -1,0 +1,57 @@
+/* General */
+.wrap {
+	margin: auto;
+	max-width: 80%;
+	padding-top: 5%;
+}
+
+/* navigation */
+.top-bar {
+	font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    background-color: #704646;
+}
+.top-bar, .top-bar ul  {
+	background-color: #704646;
+	font-color: white;
+}
+
+/* main section */
+.main {
+	font-family: 'Amatic SC', cursive;
+    font-size: 42px;
+
+	background-image: url("file:///C:/Users/Zoe/Downloads/foundation-6.2.4-complete/Picture2.png");
+	height: 85%;
+	background-position-x: center;
+	background-position-y: top;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-color: #875151;
+	
+
+}
+
+h1{
+		text-align: center;
+		font-family: 'Amatic SC', cursive;
+	    font-size: 64px;
+	    font-color: white;
+}
+
+label {
+	padding-top: 3em;
+	margin: auto;
+	width: 35%;
+	min-width: 10em;
+	font-size: 30px;
+}
+.main .button {
+	margin:auto;
+}
+
+/* footer */
+.footer  {
+	background-color: #704646;
+	height: 9.5%;
+}
