@@ -31,6 +31,6 @@ def getResponse(wine, threshold = 0.7):
 		result_cheese = random.choice(wine_json[result_wine]["cheeses"])
 		return {"type": "wine", "wine": result_wine, "cheese": result_cheese}
 	else:
-		lines = db.child('lines').get().val()
+		lines = db.child('cheesyResponses').get().val()
 		result_line = random.choice(lines)
 		return {"type": "whine",  "response": result_line}
