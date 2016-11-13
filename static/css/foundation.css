@@ -1522,10 +1522,10 @@ kbd {
       background-color: #cc8b00;
       color: #fefefe; }
   .button.alert {
-    background-color: #ec5840;
+    background-color: #704646;
     color: #fefefe; }
     .button.alert:hover, .button.alert:focus {
-      background-color: #da3116;
+      background-color: #704646;
       color: #fefefe; }
   .button.hollow {
     border: 1px solid #2199e8;

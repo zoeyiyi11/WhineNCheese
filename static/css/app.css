@@ -40,11 +40,34 @@
 }
 
 h1{
-		text-align: center;
-		font-family: 'Amatic SC', cursive;
-	    font-size: 64px;
-	    font-color: white;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 64px;
+	font-color: white;
 }
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 2.0s infinite;
+    -moz-animation: blink 2.0s infinite;
+    animation: blink 2.0s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 
 label {
 	padding-top: 2em;
@@ -94,3 +117,49 @@ textarea {
 	background-color: #704646;
 	height: 9.5%;
 }
+
+h4 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+	color: white;
+	padding-left: 7px;
+	padding-top: 5%;
+}
+
+
+/* ABOUT */
+strong, b{
+	color: white;
+	font-size: 28px;
+	padding-left: 7px;
+}
+
+.about {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.3rem;
+	color: white;
+
+	background-image: url("../images/background.png");
+	height: 85%;
+	background-position-x: center;
+	background-position-y: top;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-color: #875151;
+	
+	padding-bottom: 30%;
+
+}
+
+h2 {
+	padding-top: 5%;
+	margin-left:28%;
+	padding-bottom: 2.5%;
+	font-family: 'Amatic SC', cursive;
+}
+
+p {
+	margin-left: 28%;
+	margin-right: 28%;
+}
+
