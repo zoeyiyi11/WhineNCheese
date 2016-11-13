@@ -11,7 +11,8 @@ winez = pkl.load(open("wines.pkl", "rb"))
 def parseWine(inp):
 	inpt =inp.lower()
 	neg = analyzer.polarity_scores(inpt)['neg']
-	pos = analyser.polarity_scores(inpt)['pos']
+	pos = analyzer.polarity_scores(inpt)['pos']
+	print(neg)
 	matched = False
 	for wine in winez:
 		if(matched == False):
@@ -20,7 +21,7 @@ def parseWine(inp):
 				matched = True
 				print(wine)
 			d = difflib.SequenceMatcher(None,wine, inpt).ratio()
-			if d > 0.6:
+			if d > 0.7:
 				matched = True
 				print(wine)
-		return {"string": inp, "wine": matched, "negative_sentiment": neg,"positive_sentiment": pos}
+	return {"string": inp, "wine": matched, "negative_sentiment": neg,"positive_sentiment": pos}

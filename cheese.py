@@ -3,7 +3,6 @@ from flask import Blueprint, jsonify, request
 import pickle as pkl
 import difflib
 import re
-import regex
 import random
 import pyrebase
 import nltk.sentiment.vader as vader

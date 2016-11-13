@@ -77,6 +77,13 @@ label {
 	font-size: 30px;
 	padding-bottom: 25px;
 }
+#response-container{
+	width: 50%;
+	left: 0px;
+	bottom: 100px;
+	position:relative;
+	clear:both;
+}
 
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'],
 textarea {
@@ -104,11 +111,10 @@ textarea {
 #response {
 	font-family: 'Open Sans Condensed', sans-serif !important;
     font-size: 24px;
-    position: fixed;
-	bottom: 100px;
-	right: 40%;
+    position: relative;
+	left: 10px;
 	background: none;
-	width: 600px;
+	width: 100%;
 	z-index: 1;
 }
 
