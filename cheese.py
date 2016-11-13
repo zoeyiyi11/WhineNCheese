@@ -30,7 +30,9 @@ winez = pkl.load(open("wines.pkl", "rb"))
 def getResponse(query, threshold = 0.7, neg_threshold=0.3):
 	## if it's a wine, get a cheese
 	inp = parseWine(query)
+	print(inp)
 	result_wine = ""
+	unsure = False
 	if inp["wine"]:
 		wine_json = dict(db.child('wines').get().val())
 		wines = [w for w in wine_json]
@@ -65,6 +67,7 @@ def getResponse(query, threshold = 0.7, neg_threshold=0.3):
 			try:
 				result_wine = difflib.get_close_matches(inp["strings"], wines, cutoff=threshold)[0]
 			except:
+				unsure = True
 				result_wine = random.choice([w for w in wine_json if ((wine_json[w]["type"] == "red") if red else False) or ((wine_json[w]["type"] == "white") if white else False) or ((wine_json[w]["type"] == "dessert") if dessert else False) or (not white and not red and not dessert)])
 		
 		result_cheese = random.choice(wine_json[result_wine]["cheeses"])
@@ -83,7 +86,7 @@ def getResponse(query, threshold = 0.7, neg_threshold=0.3):
 		mood = "helping"
 	else:
 		mood = "happy"
-	return {"line": result_line, "cheese": result_cheese, "wine": result_wine, "mood": mood}
+	return {"line": result_line, "cheese": result_cheese, "wine": result_wine, "mood": mood, "unsure": unsure}
 
 def parseWine(inp, threshold=0.7):
 	inpt = inp.lower()
@@ -108,7 +111,7 @@ def parseWine(inp, threshold=0.7):
 					if matched:
 						break
 			d = difflib.SequenceMatcher(None, wine, inpt).ratio()
-			if d > 0.6:
+			if d > threshold:
 				matched = True
 	return {"string": inpt, "wine": matched, "negative_sentiment": neg,"positive_sentiment": pos}
 
