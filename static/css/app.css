@@ -22,7 +22,7 @@
     font-size: 42px;
 
 	background-image: url("../images/background.png");
-	height: 85%;
+	height: 85.5%;
 	background-position-x: center;
 	background-position-y: top;
 	background-repeat-x: no-repeat;
@@ -73,7 +73,7 @@ label {
 	padding-top: 2em;
 	margin: auto;
 	width: 35%;
-	min-width: 10em;
+	min-width: 8em;
 	font-size: 30px;
 	padding-bottom: 25px;
 }
@@ -115,15 +115,15 @@ textarea {
 /* footer */
 .footer  {
 	background-color: #704646;
-	height: 9.5%;
+	height: 5em;
 }
 
-h4 {
+.footer_text {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
 	color: white;
-	padding-left: 7px;
-	padding-top: 5%;
+	padding-top: 0.9%;
+	padding-left: 10px;
 }
 
 
@@ -140,7 +140,7 @@ strong, b{
 	color: white;
 
 	background-image: url("../images/background.png");
-	height: 85%;
+	height: 85.5%;
 	background-position-x: center;
 	background-position-y: top;
 	background-repeat-x: no-repeat;
@@ -161,5 +161,15 @@ h2 {
 p {
 	margin-left: 28%;
 	margin-right: 28%;
+}
+
+/* Media Query */
+@media (max-width: 640px) {
+	.top-bar {
+		display: none;
+	}
+	label {
+		width:25%;
+	}
 }
 
