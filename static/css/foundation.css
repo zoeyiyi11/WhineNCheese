@@ -4223,4 +4223,8 @@ table.hover tbody tr:nth-of-type(even):hover {
 
 .long-delay {
   -webkit-animation-delay: 700ms !important;
+<<<<<<< HEAD
           animation-delay: 700ms !important; }
+=======
+          animation-delay: 700ms !important; }
+>>>>>>> deea3f46b0c8a96ee27dea9bea5e1dad0c4b5fb9

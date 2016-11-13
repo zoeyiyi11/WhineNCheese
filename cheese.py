@@ -30,6 +30,7 @@ winez = pkl.load(open("wines.pkl", "rb"))
 def getResponse(query, threshold = 0.7, neg_threshold=0.3):
 	## if it's a wine, get a cheese
 	inp = parseWine(query)
+	result_wine = ""
 	if inp["wine"]:
 		wine_json = dict(db.child('wines').get().val())
 		wines = [w for w in wine_json]
@@ -76,7 +77,13 @@ def getResponse(query, threshold = 0.7, neg_threshold=0.3):
 	else:
 		result_line = ""
 
-	return {"line": result_line, "cheese": result_cheese}
+	if inp["negative_sentiment"] > 0.6:
+		mood = "sad"
+	elif inp["wine"]:
+		mood = "helping"
+	else:
+		mood = "happy"
+	return {"line": result_line, "cheese": result_cheese, "wine": result_wine, "mood": mood}
 
 def parseWine(inp, threshold=0.7):
 	inpt = inp.lower()
@@ -93,7 +100,6 @@ def parseWine(inp, threshold=0.7):
 			if not matched:
 				for n in range(1, 4):
 					grams = [" ".join(words[i:i+n]) for i in range(0, len(words), n)]
-					print(grams)
 					try:
 						result_wine = difflib.get_close_matches(wine, grams, cutoff=threshold)[0]
 						matched = True
